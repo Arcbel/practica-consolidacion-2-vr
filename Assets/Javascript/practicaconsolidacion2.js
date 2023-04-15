@@ -46,7 +46,7 @@ function mostrarDigimonEspecifico(nombre, imagen, nivel) {
         </div>
         `
     const imagenElemento = card.querySelector('img');
-    imagenElemento.scrollIntoView({ behavior: 'smooth' });
+    imagenElemento.scrollIntoView({block:"center"});
 }
 
 
