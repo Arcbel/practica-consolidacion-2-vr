@@ -10,20 +10,18 @@ fetch('https://digimon-api.vercel.app/api/digimon')
 
 function tabla(datos) {
     contenido.innerHTML = ''
-
     for (let temp of datos) {
         contenido.innerHTML +=
             `
-        <tr>
-        <td><button type="button" class="btn btn-light" onclick="mostrarDigimonEspecifico('${temp.name}', '${temp.img}', '${temp.level}')">${temp.name}</button></td>
-        <td>${temp.level}</td>
-        </tr>
-        `
+            <tr>
+            <td><button type="button" class="btn btn-light" onclick="mostrarDigimonEspecifico('${temp.name}', '${temp.img}', '${temp.level}')">${temp.name}</button></td>
+            <td>${temp.level}</td>
+            </tr>
+            `
     }
 }
 
 function mostrarDigimon(digimon) {
-
     card.innerHTML =
         `
         <div class="card">
@@ -39,14 +37,21 @@ function mostrarDigimon(digimon) {
 function mostrarDigimonEspecifico(nombre, imagen, nivel) {
     card.innerHTML =
         `
-      <div class="card">
-          <img src="${imagen}" class="card-img-top" alt="${nombre}">
-          <div class="card-body">
-              <h5 class="card-title">${nombre}</h5>
-              <p class="card-text">Nivel: ${nivel}</p>
-          </div>
-      </div>
-      `
+        <div class="card">
+            <img src="${imagen}" class="card-img-top" alt="${nombre}">
+            <div class="card-body">
+            <h5 class="card-title">${nombre}</h5>
+            <p class="card-text">Nivel: ${nivel}</p>
+            </div>
+        </div>
+        `
     const imagenElemento = card.querySelector('img');
     imagenElemento.scrollIntoView({ behavior: 'smooth' });
 }
+
+
+
+
+
+
+
