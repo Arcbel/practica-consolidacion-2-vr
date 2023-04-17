@@ -23,13 +23,3 @@ body {
 .card {
     padding: 30px;
     }
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #b0c4de;
-    }
-    
-    .navbar {
-        background-color: #4682b4;
-    }
-}    
